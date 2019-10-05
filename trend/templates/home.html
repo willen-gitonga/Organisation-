@@ -1,0 +1,194 @@
+{%extends 'base.html'%}
+{% load bootstrap4 %}
+{% load static %}
+{% block content %}
+{{block.super}}
+<head>
+    <link rel="stylesheet" href="../../static/css/styles.css">
+</head>
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../../static/img/tea plant.jpg" class="img-fluid" style="width:100%;height:300px;">
+    </div>
+    <div class="carousel-item">
+      <img src="../../static/img/plant.jpeg" class="img-fluid" style="width:100%;height:300px;">
+    </div>
+    <div class="carousel-item">
+      <img src="../../static/img/hope.jpeg" class="img-fluid" style="width:100%;height:300px;">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+<br><br>
+
+<section style="background:#4CAF50">
+
+  <br>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4">
+
+        <div class="card1">
+          <img src="../../static/img/obama.jpg" style="width:100%">
+          <div class="container1">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4">
+        <div style="color:white">
+          <h3>Vision</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab adipisci consequatur recusandae, nihil officia
+            laboriosam provident est ut perferendis? Molestiae expedita provident consequatur nulla labore iusto
+            dignissimos soluta necessitatibus? Molestiae.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4">
+        <div style="color:white">
+          <h3>Mission</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis consequatur architecto sunt aliquam, optio
+            tempore amet ab temporibus ducimus iste laudantium sequi eum eius eveniet, cumque sit. Illum, dignissimos
+            error?</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br>
+
+
+</section>
+
+<br><br>
+<section class="bg-warning">
+
+  <br>
+  <div class="container-fluid">
+    <div style="text-align:center">
+      <h2 style="color:white;">Events And Projects </h2>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4">
+        <h2 style="color:white;text-align: center">Events</h2>
+        <div class="card">
+          <div class="card-body">
+            <img src="../../static/img/event_image.jpg" class="img-fluid">
+
+          </div>
+          <div class="card-footer text-muted" style="font-size:large" >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere expedita amet minima temporibus aliquid, at
+            recusandae magni enim a culpa! Incidunt error natus dignissimos quaerat doloremque nemo at quos praesentium.
+            <a href="{% url 'event' %}" class="btn btn-outline-secondary btn-sm" disabled>
+              <span class="spinner-grow spinner-grow-sm"></span>
+              Read More ..
+              </a>
+          </div>
+        </div>
+        <br>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4">
+        <h2 style="color:white;text-align: center">Projects</h2>
+        <div class="card">
+          <div class="card-body">
+            <img src="../../static/img/project_tree.jpg" class="img-fluid">
+          </div>
+          <div class="card-footer text-muted" style="font-size:large">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere expedita amet minima temporibus aliquid, at
+            recusandae magni enim a culpa! Incidunt error natus dignissimos quaerat doloremque nemo at quos praesentium.
+            <a href="{% url 'project' %}" class="btn btn-outline-secondary btn-sm" disabled>
+                <span class="spinner-grow spinner-grow-sm"></span>
+                Read More ..
+                </a>
+          
+          </div>
+        </div>
+        <br>
+      </div>
+
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4">
+        <h2 style="color:white;text-align: center">Future Plans</h2>
+        <div class="card">
+          <div class="card-body">
+            <img src="../../static/img/road_fixing.jpg" class="img-fluid">
+          </div>
+          <div class="card-footer text-muted" style="font-size:large">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere expedita amet minima temporibus aliquid, at
+            recusandae magni enim a culpa! Incidunt error natus dignissimos quaerat doloremque nemo at quos praesentium.
+            
+            <a href="{% url 'plan' %}" class="btn btn-outline-secondary btn-sm" disabled>
+                <span class="spinner-grow spinner-grow-sm"></span>
+                Read More ..
+                </a>
+          </div>
+        </div>
+        <br>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+<div class="container-fluid">
+<div id="disqus_thread"></div>
+</div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://organisation-3.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//organisation-3.disqus.com/count.js" async></script>
+{% endblock %}
+
+
+
+<style>
+  .card1 {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+
+  /* On mouse-over, add a deeper shadow */
+  .card1:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* Add some padding inside the card container */
+  .container1 {
+    padding: 2px 16px;
+  }
+</style>

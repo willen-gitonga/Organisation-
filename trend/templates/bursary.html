@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+{% load bootstrap4 %}
+{% block content %}
+{{ block.super}}
+
+
+<u>
+<h2 style="font-family:cursive;text-align: center">The Instructions.</h2>
+</u>
+<br>
+<div class="container">
+    <div class="jumbotron">
+<ol style="font-size:medium">
+    <li>This bursary scheme has limited available funds and is only meant to support only the very needy cases.</li>
+    <li>It is an offense to give false information.</li>
+    <li>Successful applicants will have the awarded bursary paid directly to university or college.</li>
+    <li>When outlining the community work you are invloved in you are limited to not more than 150 words.Please be as Truthful as possible to qualify.</li>
+</ol>
+    </div>
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {%bootstrap_form form%}
+        <button type="submit" class="btn btn-success" style="background-color:#4CAF50">Submit</button>
+      </form>
+   </div>
+
+
+{% endblock %}

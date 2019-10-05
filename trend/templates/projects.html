@@ -1,0 +1,79 @@
+{%extends 'base.html'%}
+{% load bootstrap4 %}
+{% block content %}
+{{ block.super}}
+
+<section style="background:#4CAF50">
+    <div style="color:white">
+        <br><br>
+        <div class="container">
+            <u>
+                <h2>Our Projects</h2>
+            </u>
+        </div>
+        <br><br>
+    </div>
+</section>
+<br>
+{% for project in projects%}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4">
+            <div class="card1">
+                <!-- <div class="card-body"> -->
+                <img src="{{project.image.url}}" alt="Card Image" class="img-fluid" style="width:85%;height: 85%;">
+                <div class="font">
+                    <p class="card-text">{{project.title}}</p>
+                </div>
+                <!-- </div> -->
+            </div>
+            <br>
+        </div>
+
+
+
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4">
+            <div class="font">
+                <p>{{project.description}}</p>
+                <p>Period:{{project.time_taken}}</p>
+                <p>Location:{{project.location}}</p>
+
+
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4">
+
+            <h2 style="font-family:cursive">Latest Projects</h2>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+<style>
+    .card1 {
+        /* Add shadows to create the "card" effect */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        height: 50px;
+
+    }
+
+    /* On mouse-over, add a deeper shadow */
+    .card1:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    /* Add some padding inside the card container */
+    .container1 {
+        padding: 2px 16px;
+    }
+
+    .font{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+</style>
